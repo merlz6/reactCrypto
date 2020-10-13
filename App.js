@@ -11,6 +11,8 @@ function App() {
   const [ltcData, setLtcData] = useState({})
   const [ripData, setRipData] = useState({})
   const [ethData, setEthData] = useState({})
+  const [coinList, setCoinList] = useState([{}])
+  // broken individual incase I need specific ones later (combine and reduce if not)
   function btcPull(){
     let btcInfo = `https://api.cryptonator.com/api/ticker/btc-usd`
     axios.get(btcInfo)
@@ -35,12 +37,14 @@ function App() {
     // console.log(ethInfo)
   }
 
+
+
 useEffect(()=>{
   btcPull()
   ltcPull()
   ripPull()
   ethPull()
-
+  
 // axios.get(btcInfo)
 // .then(data => setBtcData(data.data.ticker))
   // console.log(btcData)

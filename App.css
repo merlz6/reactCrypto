@@ -27,6 +27,7 @@
   flex-direction: row;
   margin:0 10px;
   font-size: 80%;
+  border:1px solid black;
 }
 .App-header {
   background-color: #282c34;
